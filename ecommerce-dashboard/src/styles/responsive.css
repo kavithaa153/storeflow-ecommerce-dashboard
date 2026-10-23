@@ -1,0 +1,278 @@
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  width: 100%;
+  min-width: 320px;
+  overflow-x: clip;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  width: 100%;
+  min-width: 320px;
+  margin: 0;
+  overflow-x: clip;
+}
+
+#root,
+.store-app {
+  width: 100%;
+  min-height: 100vh;
+  min-width: 0;
+}
+
+img,
+video,
+canvas,
+svg {
+  max-width: 100%;
+}
+
+button,
+input,
+select,
+textarea {
+  max-width: 100%;
+  min-width: 0;
+}
+
+.store-content,
+.dashboard-content,
+.surface-card,
+.stat-card,
+.sales-chart-card,
+.category-card,
+.recent-orders-card {
+  min-width: 0;
+}
+
+.page-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.page-heading > * {
+  min-width: 0;
+}
+
+.surface-card {
+  width: 100%;
+  background: #fff;
+  border: 1px solid #e9ebe4;
+  border-radius: 18px;
+  box-shadow: 0 4px 16px rgba(25, 30, 15, 0.04);
+}
+
+.table-scroll {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  -webkit-overflow-scrolling: touch;
+}
+
+.data-table {
+  width: 100%;
+  min-width: 680px;
+  border-collapse: collapse;
+}
+
+.data-table th,
+.data-table td {
+  padding: 14px 16px;
+  vertical-align: middle;
+}
+
+.top-search {
+  max-width: 100%;
+}
+
+input,
+select,
+textarea {
+  font-size: 16px;
+}
+
+button,
+.primary-button,
+.top-icon-button {
+  min-height: 40px;
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid rgba(166, 218, 40, 0.75);
+  outline-offset: 3px;
+}
+
+@media (max-width: 1023px) {
+  .store-content,
+  .dashboard-content {
+    padding: 26px 22px;
+  }
+
+  .stats-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .dashboard-middle {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .top-navigation {
+    flex-wrap: wrap;
+  }
+
+  .top-nav-links {
+    order: 3;
+    width: 100%;
+    max-width: 100%;
+    overflow-x: auto;
+    scrollbar-width: thin;
+  }
+
+  .top-nav-actions {
+    margin-left: auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .store-content,
+  .dashboard-content {
+    padding: 20px 14px;
+  }
+
+  .page-heading {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .page-heading > button {
+    align-self: flex-start;
+  }
+
+  .dashboard-welcome {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .dashboard-date {
+    max-width: 100%;
+  }
+
+  .stats-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+  }
+
+  .stat-card {
+    padding: 14px;
+    border-radius: 14px;
+  }
+
+  .stat-title {
+    font-size: 11px;
+  }
+
+  .stat-value {
+    margin: 14px 0 10px;
+    font-size: clamp(19px, 5.5vw, 26px);
+    letter-spacing: -0.5px;
+  }
+
+  .stat-footer {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .stat-icon {
+    width: 34px;
+    height: 34px;
+  }
+
+  .sales-chart-card,
+  .category-card,
+  .recent-orders-card {
+    padding: 16px;
+  }
+
+  .chart-container {
+    height: 250px;
+  }
+
+  .top-navigation {
+    gap: 10px;
+    padding: 12px 14px;
+  }
+
+  .top-nav-links {
+    gap: 4px;
+  }
+
+  .top-nav-link {
+    padding: 10px 12px;
+  }
+
+  .top-nav-actions {
+    gap: 6px;
+  }
+
+  .top-search {
+    width: min(145px, 38vw);
+  }
+
+  .top-icon-button {
+    width: 36px;
+    height: 36px;
+  }
+
+  .table-scroll {
+    margin: 0;
+  }
+
+  .data-table {
+    min-width: 680px;
+  }
+}
+
+@media (max-width: 380px) {
+  .stats-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .top-search {
+    width: 110px;
+  }
+
+  .store-brand {
+    font-size: 16px;
+  }
+
+  .chart-container {
+    height: 220px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

@@ -1,0 +1,158 @@
+
+.analytics-summary-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+  margin-bottom: 26px;
+}
+
+.analytics-summary-card,
+.analytics-chart-card {
+  min-width: 0;
+  padding: 22px;
+  background: #fff;
+  border: 1px solid #e9ebe5;
+  border-radius: 18px;
+}
+
+.analytics-summary-card > span {
+  color: #777b72;
+  font-size: 13px;
+}
+
+.analytics-summary-value {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin: 16px 0 10px;
+}
+
+.analytics-summary-value strong {
+  overflow-wrap: anywhere;
+  color: #171914;
+  font-size: 25px;
+}
+
+.analytics-summary-value svg {
+  flex-shrink: 0;
+  color: #5a701c;
+}
+
+.analytics-summary-card small {
+  color: #85887f;
+  font-size: 12px;
+}
+
+.analytics-charts-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.5fr) minmax(280px, 1fr);
+  gap: 20px;
+}
+
+.analytics-chart-heading {
+  margin-bottom: 20px;
+}
+
+.analytics-chart-heading h2 {
+  margin: 0 0 6px;
+  color: #20221b;
+  font-size: 18px;
+}
+
+.analytics-chart-heading p {
+  margin: 0;
+  color: #85887f;
+  font-size: 12px;
+}
+
+.analytics-chart {
+  width: 100%;
+  height: 290px;
+  min-width: 0;
+}
+
+.analytics-pie-chart {
+  height: 220px;
+}
+
+.analytics-legend {
+  display: grid;
+  gap: 13px;
+  margin-top: 12px;
+}
+
+.analytics-legend-item {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  color: #696d63;
+  font-size: 12px;
+}
+
+.analytics-legend-item strong {
+  margin-left: auto;
+  color: #20221b;
+}
+
+.analytics-legend-dot {
+  width: 9px;
+  height: 9px;
+  flex-shrink: 0;
+  border-radius: 50%;
+}
+
+.analytics-stock-card {
+  grid-column: 1 / -1;
+}
+
+.analytics-stock-chart {
+  height: 320px;
+}
+
+.analytics-empty {
+  display: grid;
+  min-height: 180px;
+  place-items: center;
+  color: #85887f;
+  font-size: 13px;
+  text-align: center;
+}
+
+@media (max-width: 1000px) {
+  .analytics-summary-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .analytics-charts-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .analytics-stock-card {
+    grid-column: auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .analytics-summary-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .analytics-summary-card,
+  .analytics-chart-card {
+    padding: 17px;
+  }
+
+  .analytics-chart {
+    height: 250px;
+  }
+
+  .analytics-pie-chart {
+    height: 220px;
+  }
+
+  .analytics-stock-chart {
+    height: 300px;
+  }
+}

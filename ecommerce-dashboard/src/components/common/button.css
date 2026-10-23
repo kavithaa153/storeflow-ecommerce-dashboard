@@ -1,0 +1,93 @@
+
+.app-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 42px;
+  padding: 11px 17px;
+  border: 1px solid transparent;
+  border-radius: 11px;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.2;
+  transition: background 180ms ease, color 180ms ease,
+    border-color 180ms ease, transform 180ms ease;
+}
+
+.app-button:hover:not(:disabled) {
+  transform: translateY(-1px);
+}
+
+.app-button:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.app-button-primary {
+  color: #171a13;
+  background: #c6ff35;
+  border-color: #c6ff35;
+}
+
+.app-button-primary:hover:not(:disabled) {
+  background: #b5ed28;
+  border-color: #b5ed28;
+}
+
+.app-button-secondary {
+  color: #25271f;
+  background: #fff;
+  border-color: #e3e6dc;
+}
+
+.app-button-secondary:hover:not(:disabled) {
+  background: #f5f7f0;
+}
+
+.app-button-dark {
+  color: #fff;
+  background: #171a13;
+}
+
+.app-button-dark:hover:not(:disabled) {
+  background: #33372a;
+}
+
+.app-button-danger {
+  color: #b93636;
+  background: #ffeded;
+  border-color: #ffeded;
+}
+
+.app-button-danger:hover:not(:disabled) {
+  background: #ffdddd;
+}
+
+.button-spinner {
+  width: 14px;
+  height: 14px;
+  border: 2px solid currentColor;
+  border-right-color: transparent;
+  border-radius: 50%;
+  animation: button-spin 650ms linear infinite;
+}
+
+@keyframes button-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 600px) {
+  .app-button {
+    min-height: 44px;
+    padding: 11px 14px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .button-spinner {
+    animation: none;
+  }
+}

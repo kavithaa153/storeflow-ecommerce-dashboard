@@ -1,0 +1,133 @@
+
+.inventory-summary-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+  margin-bottom: 28px;
+}
+
+.inventory-summary-card {
+  min-width: 0;
+  padding: 22px;
+  background: #fff;
+  border: 1px solid #e9ebe5;
+  border-radius: 18px;
+}
+
+.inventory-summary-card > span {
+  color: #777b72;
+  font-size: 13px;
+}
+
+.inventory-summary-value {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.inventory-summary-value strong {
+  color: #171914;
+  font-size: 27px;
+}
+
+.inventory-summary-value svg {
+  flex-shrink: 0;
+  color: #5a701c;
+}
+
+.inventory-table-section {
+  padding: 24px;
+  background: #fff;
+  border: 1px solid #e9ebe5;
+  border-radius: 18px;
+}
+
+.inventory-table-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 22px;
+}
+
+.inventory-table-heading h2 {
+  margin: 0 0 6px;
+  font-size: 19px;
+}
+
+.inventory-table-heading p {
+  margin: 0;
+  color: #777b72;
+  font-size: 13px;
+}
+
+.inventory-filter {
+  max-width: 180px;
+  padding: 10px 12px;
+  border: 1px solid #e0e3d9;
+  border-radius: 10px;
+  background: #fff;
+  color: #25271f;
+  font: inherit;
+  font-size: 13px;
+}
+
+.inventory-low {
+  color: #b45309;
+}
+
+.inventory-update-button {
+  padding: 9px 12px;
+  border: 1px solid #dce7c4;
+  border-radius: 9px;
+  background: #f2f9df;
+  color: #344512;
+  font: inherit;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.inventory-update-button:hover {
+  background: #e6f5c1;
+}
+
+.inventory-update-button:focus-visible,
+.inventory-filter:focus-visible {
+  outline: 2px solid #a1cf2a;
+  outline-offset: 2px;
+}
+
+@media (max-width: 1000px) {
+  .inventory-summary-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .inventory-summary-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .inventory-summary-card {
+    padding: 18px;
+  }
+
+  .inventory-table-section {
+    padding: 16px;
+  }
+
+  .inventory-table-heading {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .inventory-filter {
+    width: 100%;
+    max-width: none;
+  }
+}
